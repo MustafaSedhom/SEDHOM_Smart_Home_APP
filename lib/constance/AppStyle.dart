@@ -3,9 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 class APPColors {
   static const Color APP_Main_Color = Colors.white;
-  static const Color font_color = Colors.black87;
-  static const Color Icon_Color = Colors.black54;
+  static const Color font_color = Colors.black;
+  static const Color font_active_color = Colors.white;
+  static const Color Icon_Color = Colors.black;
+  static const Color Icon_active_Color = Colors.white;
   static const Color Switch_color = Colors.white;
+  static const Color Switch_active_color = Colors.black;
+  static const Color container_color = Colors.grey;
+  static const Color container_active_color = Colors.black;
 }
 
 class APPFontStyle {

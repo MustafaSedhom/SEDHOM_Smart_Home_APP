@@ -5,8 +5,8 @@ class CardsData {
 }
 
 List<CardsData> card_data_list = [
-  CardsData(name: "Smart Light", Image_path: "images/light-bulb.png"),
-  CardsData(name: "Smart AC", Image_path: "images/air-conditioner.png"),
-  CardsData(name: "Smart TV", Image_path: "images/smart-tv.png"),
-  CardsData(name: "Smart AC", Image_path: "images/fan.png"),
+  CardsData(name: "Light", Image_path: "images/light-bulb.png"),
+  CardsData(name: "AC", Image_path: "images/air-conditioner.png"),
+  CardsData(name: "TV", Image_path: "images/smart-tv.png"),
+  CardsData(name: "Fan", Image_path: "images/fan.png"),
 ];
