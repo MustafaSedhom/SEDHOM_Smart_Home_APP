@@ -32,6 +32,10 @@ class _HomescreenState extends State<Homescreen> {
                 // welcome
                 HomeScreenWelcome(),
                 Gap(10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Divider(thickness: 2),
+                ),
                 // smart devices text
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18),

@@ -14,9 +14,14 @@ class HomeScreenWelcome extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Welcome Home", style: APPFontStyle.app_style_poppins()),
-            Gap(30),
-            Text("Garret Reynolds", style: APPFontStyle.app_style_poppins()),
+            Text(
+              "Welcome Home",
+              style: APPFontStyle.app_style_poppins(
+                font_Weight: FontWeight.w300,
+              ),
+            ),
+            Gap(10),
+            Text("SEDHOM Smart", style: APPFontStyle.app_style_poppins()),
           ],
         ),
         Image.asset("images/image.png", height: 150, width: 150),

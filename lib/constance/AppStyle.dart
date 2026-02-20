@@ -9,7 +9,7 @@ class APPColors {
   static const Color Icon_active_Color = Colors.white;
   static const Color Switch_color = Colors.white;
   static const Color Switch_active_color = Colors.black;
-  static const Color container_color = Colors.grey;
+  static const Color container_color = Color.fromARGB(218, 209, 208, 208);
   static const Color container_active_color = Colors.black;
 }
 
