@@ -3,7 +3,9 @@ import 'package:gap/gap.dart';
 import 'package:smart_home_app/constance/AppStyle.dart';
 
 class CardscreenAppbar extends StatelessWidget {
-  const CardscreenAppbar({super.key});
+  final String? name_from_user;
+  final String? Room_Name;
+  const CardscreenAppbar({super.key, this.name_from_user, this.Room_Name});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +24,13 @@ class CardscreenAppbar extends StatelessWidget {
             ),
             Column(
               children: [
-                Text("Temperature", style: APPFontStyle.app_style_poppins()),
+                Text(
+                  name_from_user ?? "User Room",
+                  style: APPFontStyle.app_style_poppins(),
+                ),
                 Gap(5),
                 Text(
-                  "Living Room",
+                  Room_Name ?? "Living Room",
                   style: APPFontStyle.app_style_poppins(
                     size: 12,
                     font_Weight: FontWeight.normal,
