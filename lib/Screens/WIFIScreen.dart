@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:smart_home_app/Respnsive/ScreenArea.dart';
+import 'package:smart_home_app/Screens/widgets/Custom_text_button.dart';
 import 'package:smart_home_app/Screens/widgets/custom_app_bar.dart';
 import 'package:smart_home_app/Screens/widgets/custom_text_feild.dart';
 import 'package:smart_home_app/Screens/widgets/wifi_list_view.dart';
@@ -48,6 +49,17 @@ class Wifiscreen extends StatelessWidget {
               Hint_text: "WiFi Password",
               is_password: true,
               icon: Icons.lock,
+            ),
+          ),
+          Gap(10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 50),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                CustomTextButton(txt: "Cancel"),
+                CustomTextButton(txt: "Save"),
+              ],
             ),
           ),
         ],
