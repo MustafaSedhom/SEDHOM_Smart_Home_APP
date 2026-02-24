@@ -7,8 +7,8 @@ class HomeScreenDevices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-    GridView.builder(
+    return GridView.builder(
+      physics: NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(10),
       itemCount: card_data_list.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

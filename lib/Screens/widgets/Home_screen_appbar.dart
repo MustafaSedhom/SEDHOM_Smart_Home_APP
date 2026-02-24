@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home_app/Respnsive/ScreenArea.dart';
 import 'package:smart_home_app/Screens/CardScreen.dart';
 import 'package:smart_home_app/Screens/user_data_screen.dart';
 import 'package:smart_home_app/constance/AppStyle.dart';
@@ -21,7 +22,11 @@ class HomeScreenAppbar extends StatelessWidget {
               ).push(MaterialPageRoute(builder: (context) => Cardscreen()));
             },
             borderRadius: BorderRadius.circular(50),
-            child: Image.asset("images/menu.png", height: 40, width: 40),
+            child: Image.asset(
+              "images/menu.png",
+              height: (ScreenArea.Height > 800) ? 60 : 40,
+              width: (ScreenArea.Width > 600) ? 60 : 40,
+            ),
           ),
           InkWell(
             onTap: () {
@@ -31,6 +36,7 @@ class HomeScreenAppbar extends StatelessWidget {
             },
             borderRadius: BorderRadius.circular(50),
             child: CircleAvatar(
+              radius: (ScreenArea.Width > 500) ? 40 : 20,
               backgroundImage: User.image_or_char == UserShortcut.image
                   ? AssetImage(User.image_url ?? "")
                   : null,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:smart_home_app/Respnsive/ScreenArea.dart';
 import 'package:smart_home_app/Screens/widgets/Home_screen_appbar.dart';
 import 'package:smart_home_app/Screens/widgets/Home_screen_devices.dart';
 import 'package:smart_home_app/Screens/widgets/Home_screen_welcome.dart';
@@ -15,6 +16,7 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
+    ScreenArea.init(context);
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -28,10 +30,10 @@ class _HomescreenState extends State<Homescreen> {
                 Gap(10),
                 // appBar
                 HomeScreenAppbar(),
-                Gap(30),
+                Gap(5),
                 // welcome
                 HomeScreenWelcome(),
-                Gap(10),
+                Gap(5),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Divider(thickness: 2),
@@ -44,7 +46,10 @@ class _HomescreenState extends State<Homescreen> {
                     style: APPFontStyle.app_style_poppins(),
                   ),
                 ),
-                SizedBox(height: 400, child: HomeScreenDevices()),
+                SizedBox(
+                  height: ScreenArea.Height * 0.6,
+                  child: HomeScreenDevices(),
+                ),
               ],
             ),
           ),

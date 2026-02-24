@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home_app/Respnsive/ScreenArea.dart';
+import 'package:smart_home_app/constance/AppStyle.dart';
+import 'package:smart_home_app/local_data/Wifi_scaning_data.dart';
 
 class WifiCard extends StatefulWidget {
-  const WifiCard({super.key});
+  const WifiCard({super.key, required this.wifidata});
+
+  final WifiScaningData wifidata;
 
   @override
   State<WifiCard> createState() => _WifiCardState();
@@ -9,8 +14,10 @@ class WifiCard extends StatefulWidget {
 
 class _WifiCardState extends State<WifiCard> {
   Color Card_color = Colors.white70;
+
   @override
   Widget build(BuildContext context) {
+    ScreenArea.init(context);
     return InkWell(
       onTap: () async {
         setState(() {
@@ -30,9 +37,20 @@ class _WifiCardState extends State<WifiCard> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(Icons.wifi),
-              Text("name wifi"),
-              Icon(Icons.lock),
-              Text("55%"),
+              Text(
+                (widget.wifidata.name!.length > 10 && ScreenArea.Width < 400)
+                    ? "${widget.wifidata.name!.substring(0, 10)}…"
+                    : widget.wifidata.name!,
+                style: APPFontStyle.app_style_poppins(size: 15),
+                maxLines: 1,
+              ),
+              widget.wifidata.is_locked!
+                  ? Icon(Icons.lock)
+                  : Icon(Icons.lock_open_rounded),
+              Text(
+                "${widget.wifidata.range!}%",
+                style: APPFontStyle.app_style_poppins(size: 15),
+              ),
             ],
           ),
         ),

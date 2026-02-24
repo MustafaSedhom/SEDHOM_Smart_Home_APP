@@ -8,7 +8,7 @@ class HomeScreenWelcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
@@ -24,7 +24,7 @@ class HomeScreenWelcome extends StatelessWidget {
             Text("SEDHOM Smart", style: APPFontStyle.app_style_poppins()),
           ],
         ),
-        Image.asset("images/image.png", height: 150, width: 150),
+        Image.asset("images/image.png", height: 130, width: 130),
       ],
     );
   }
