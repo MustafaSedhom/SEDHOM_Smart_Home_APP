@@ -27,7 +27,6 @@ class HomeScreenDevices extends StatelessWidget {
     }
 
     return GridView.builder(
-      // physics: NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(10),
       itemCount: card_data_list.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

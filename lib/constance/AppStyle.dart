@@ -11,6 +11,8 @@ class APPColors {
   static const Color Switch_active_color = Colors.black;
   static const Color container_color = Color.fromARGB(218, 209, 208, 208);
   static const Color container_active_color = Colors.black;
+  static const Color color_select_elemnt = Colors.lightBlue;
+  static const Color color_not_select_elemnt = Colors.white70;
 }
 
 class APPFontStyle {

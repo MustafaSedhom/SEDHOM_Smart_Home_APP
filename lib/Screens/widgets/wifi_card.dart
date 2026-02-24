@@ -21,11 +21,11 @@ class _WifiCardState extends State<WifiCard> {
     return InkWell(
       onTap: () async {
         setState(() {
-          Card_color = Colors.lightBlue;
+          Card_color =APPColors.color_select_elemnt;
         });
         await Future.delayed(const Duration(milliseconds: 200));
         setState(() {
-          Card_color = Colors.white70;
+          Card_color = APPColors.color_not_select_elemnt;
         });
       },
       child: Card(
