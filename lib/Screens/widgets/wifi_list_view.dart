@@ -6,7 +6,8 @@ import 'package:smart_home_app/local_data/Wifi_scaning_data.dart';
 
 // ignore: must_be_immutable
 class WifiListView extends StatelessWidget {
-  WifiListView({super.key});
+  final ValueChanged<String>? valueChanged;
+  WifiListView({super.key, this.valueChanged});
   List<WifiScaningData> Wifi_Afer_scanning = [
     WifiScaningData(name: "Mustafa Sedhom1", range: 37, is_locked: true),
     WifiScaningData(name: "Mustafa Sedhom2", range: 55, is_locked: false),
@@ -39,7 +40,12 @@ class WifiListView extends StatelessWidget {
         child: ListView.builder(
           itemCount: Wifi_Afer_scanning.length,
           itemBuilder: (context, index) {
-            return WifiCard(wifidata: Wifi_Afer_scanning[index]);
+            return WifiCard(
+              wifidata: Wifi_Afer_scanning[index],
+              onSelected: (value) {
+                valueChanged!.call(Wifi_Afer_scanning[index].name!);
+              },
+            );
           },
         ),
       ),

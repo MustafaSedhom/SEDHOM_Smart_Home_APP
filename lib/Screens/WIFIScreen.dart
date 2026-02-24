@@ -31,7 +31,11 @@ class Wifiscreen extends StatelessWidget {
             },
           ),
           Gap(20),
-          WifiListView(),
+          WifiListView(
+            valueChanged: (val) {
+              _name_controller.text = val;
+            },
+          ),
           Gap(20),
           // text feild for wifi name
           Padding(
@@ -52,13 +56,19 @@ class Wifiscreen extends StatelessWidget {
             ),
           ),
           Gap(10),
+          // buttons
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                CustomTextButton(txt: "Cancel"),
-                CustomTextButton(txt: "Save"),
+                CustomTextButton(
+                  txt: "Cancel",
+                  on_preesed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                CustomTextButton(txt: "Save", on_preesed: () {}),
               ],
             ),
           ),

@@ -4,9 +4,10 @@ import 'package:smart_home_app/constance/AppStyle.dart';
 import 'package:smart_home_app/local_data/Wifi_scaning_data.dart';
 
 class WifiCard extends StatefulWidget {
-  const WifiCard({super.key, required this.wifidata});
+  const WifiCard({super.key, required this.wifidata, this.onSelected});
 
   final WifiScaningData wifidata;
+  final ValueChanged<bool>? onSelected;
 
   @override
   State<WifiCard> createState() => _WifiCardState();
@@ -20,8 +21,11 @@ class _WifiCardState extends State<WifiCard> {
     ScreenArea.init(context);
     return InkWell(
       onTap: () async {
+        if (widget.onSelected != null) {
+          widget.onSelected!(true);
+        }
         setState(() {
-          Card_color =APPColors.color_select_elemnt;
+          Card_color = APPColors.color_select_elemnt;
         });
         await Future.delayed(const Duration(milliseconds: 200));
         setState(() {
