@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home_app/Screens/CardScreen.dart';
-import 'package:smart_home_app/Screens/Guagescreen.dart';
-// import 'Screens/Homescreen.dart';
+import 'package:smart_home_app/Screens/Homescreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,11 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // home: Homescreen(),
-      // home: Guagescreen(),
-      home: Cardscreen(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Homescreen());
   }
 }

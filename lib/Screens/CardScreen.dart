@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:smart_home_app/Screens/WIFIScreen.dart';
 import 'package:smart_home_app/Screens/widgets/Custom_Circle.dart';
 import 'package:smart_home_app/Screens/widgets/Room_card.dart';
-import 'package:smart_home_app/Screens/widgets/cardscreen_appbar.dart';
 import 'package:smart_home_app/Screens/widgets/custom_Divider.dart';
+import 'package:smart_home_app/Screens/widgets/custom_app_bar.dart';
 import 'package:smart_home_app/constance/AppStyle.dart';
 
 class Cardscreen extends StatefulWidget {
@@ -25,7 +26,19 @@ class _CardscreenState extends State<Cardscreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Gap(20),
-              CardscreenAppbar(),
+              CustomAppBar(
+                show_title: true,
+                Title: "User Room",
+                small_Title: "Living Room",
+                back_pressed: () {
+                  Navigator.of(context).pop();
+                },
+                menu_preesed: () {
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => Wifiscreen()));
+                },
+              ),
               Gap(30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

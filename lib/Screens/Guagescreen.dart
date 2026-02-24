@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home_app/constance/AppStyle.dart';
-import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class Guagescreen extends StatefulWidget {
   const Guagescreen({super.key});
