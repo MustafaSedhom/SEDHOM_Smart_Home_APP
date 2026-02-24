@@ -8,4 +8,16 @@ class ScreenArea {
     Width = MediaQuery.of(context).size.width;
     Height = MediaQuery.of(context).size.height;
   }
+
+  static bool isMobile() {
+    return Width < 600;
+  }
+
+  static bool isTablet() {
+    return Width >= 600 && Width < 1200;
+  }
+
+  static bool isDesktop() {
+    return Width >= 1200;
+  }
 }

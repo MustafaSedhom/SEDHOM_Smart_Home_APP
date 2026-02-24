@@ -8,8 +8,8 @@ class HomeScreenWelcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      // crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
