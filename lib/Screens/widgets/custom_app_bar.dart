@@ -12,6 +12,8 @@ class CustomAppBar extends StatelessWidget {
   final IconData? Menu_Icon;
   final bool? show_menu_icon;
   final bool? show_Back_icon;
+  final double? menu_icon_size;
+  final double? back_icon_size;
 
   const CustomAppBar({
     super.key,
@@ -24,6 +26,8 @@ class CustomAppBar extends StatelessWidget {
     this.Menu_Icon,
     this.show_menu_icon,
     this.show_Back_icon,
+    this.menu_icon_size,
+    this.back_icon_size,
   });
 
   @override
@@ -43,7 +47,7 @@ class CustomAppBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(40),
                     child: Icon(
                       Back_Icon ?? Icons.arrow_back_ios,
-                      size: 20,
+                      size: back_icon_size ?? 20,
                       color: APPColors.Icon_Color,
                     ),
                   ),
@@ -74,7 +78,7 @@ class CustomAppBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     child: Icon(
                       Menu_Icon ?? Icons.more_vert_outlined,
-                      size: 20,
+                      size: menu_icon_size ?? 20,
                       color: APPColors.Icon_Color,
                     ),
                   ),

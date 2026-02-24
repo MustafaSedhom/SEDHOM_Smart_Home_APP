@@ -30,6 +30,8 @@ class _CardscreenState extends State<Cardscreen> {
                 show_title: true,
                 Title: "User Room",
                 small_Title: "Living Room",
+                Menu_Icon: Icons.wifi,
+                menu_icon_size: 25,
                 back_pressed: () {
                   Navigator.of(context).pop();
                 },

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:smart_home_app/Screens/widgets/custom_app_bar.dart';
+import 'package:smart_home_app/Screens/widgets/wifi_list_view.dart';
 import 'package:smart_home_app/constance/AppStyle.dart';
 
 class Wifiscreen extends StatelessWidget {
@@ -15,7 +16,8 @@ class Wifiscreen extends StatelessWidget {
           Gap(20),
           CustomAppBar(
             show_title: true,
-            show_menu_icon: false,
+            Menu_Icon: Icons.settings_outlined,
+            menu_icon_size: 30,
             Title: "WIFI",
             small_Title: "Scaning",
             back_pressed: () {
@@ -23,6 +25,7 @@ class Wifiscreen extends StatelessWidget {
             },
           ),
           Gap(20),
+          WifiListView(),
         ],
       ),
     );
